@@ -1,0 +1,33 @@
+{
+  "name": "Dyno-DataFactory",
+  "version": "1.0.0",
+  "homepage": "https://github.com/Da-Vinci/Dyno-DataFactory",
+  "author": {
+    "name": "Brian Tanner",
+    "email": "brian@tanner.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Da-Vinci/Dyno-DataFactory.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Da-Vinci/Dyno-DataFactory/issues"
+  },
+  "main": "index.js",
+  "private": true,
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "engineStrict": true,
+  "dependencies": {
+    "bluebird": "^3.4.1",
+    "dotenv": "^2.0.0",
+    "getenv": "^0.6.0",
+    "mongoose": "^4.5.1",
+    "winston": "^2.2.0",
+    "winston-sentry": "^0.1.4",
+  },
+  "devDependencies": {
+    "eslint": "^3.5.0"
+  }
+}
