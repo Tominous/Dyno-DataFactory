@@ -23,6 +23,7 @@
     "bluebird": "^3.4.1",
     "dotenv": "^2.0.0",
     "getenv": "^0.6.0",
+    "moment": "^2.17.0",
     "mongoose": "^4.5.1",
     "winston": "^2.2.0",
     "winston-sentry": "^0.1.4"

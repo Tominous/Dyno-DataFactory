@@ -7,6 +7,7 @@ const mongoose = require('mongoose');
 const Logger = require('./logger');
 
 const basename = path.basename(module.filename);
+const modelPath = path.join(__dirname, 'models');
 
 class DataFactory {
 	constructor(options) {
@@ -37,11 +38,11 @@ class DataFactory {
 		connection.once('open', () => this.logger.info('Connected to mongo.'));
 
 		fs
-			.readdirSync('./models')
+			.readdirSync(modelPath)
 			.filter(file => (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js'))
 			.forEach(file => {
-				let model = require(path.join('./models', file));
-				this._db[model.modelName] = model;
+				const model = require(path.join(modelPath, file));
+				this._models[model.modelName] = model;
 			});
 	}
 
