@@ -6,7 +6,7 @@ const Schema = mongoose.Schema;
 const modLogSchema = new Schema({
   server:      { type: String, required: true, index: true },
   user:        { type: Object, required: true },
-  mod:         { type: Object, required: false },
+  mod:         { type: Object, required: true },
   type:        { type: String, required: true },
   reason:      { type: String },
   createdAt:   { type: Date, default: Date.now, expires: '30d' },
